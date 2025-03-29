@@ -1,0 +1,19 @@
+# --find-links https://download.pytorch.org/whl/torch_stable.html
+# --find-links https://download.pytorch.org/whl/cpu
+# torch==2.4.1
+# pandas
+# numpy
+# scikit-learn
+# matplotlib
+# seaborn
+# black
+
+# Excluding these (torch was 2.4.1) were the values that were installed and worked, when no versions were specified.
+# torch==2.4.1 --index-url https://download.pytorch.org/whl/cpu
+torch==2.4.1
+pandas
+numpy==1.24.4
+scikit-learn==1.3.2
+matplotlib
+seaborn
+black==24.8.0
