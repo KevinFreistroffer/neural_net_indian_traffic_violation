@@ -142,18 +142,18 @@ def train_model():
             print(f'Epoch [{epoch+1}/{num_epochs}], Average Loss: {avg_loss:.4f}')
 
         
-        os.makedirs('models', exists_ok=True)
+    os.makedirs('models', exist_ok=True)
 
-        model_path = os.path.join('models', 'traffic_violation_model.pth')
-        torch.save({
-            'epoch': num_epochs,
-            'model_state_dict': model.state_dict(),
-            'optimizer_state_dict': optimizer.state_dict(),
-            'loss': avg_loss
-        }, model_path)
+    model_path = os.path.join('models', 'traffic_violation_model.pth')
+    torch.save({
+        'epoch': num_epochs,
+        'model_state_dict': model.state_dict(),
+        'optimizer_state_dict': optimizer.state_dict(),
+        'loss': avg_loss
+    }, model_path)
 
-        print("Model saved!")
-        return model
+    print("Model saved!")
+    return model
 
 
 
