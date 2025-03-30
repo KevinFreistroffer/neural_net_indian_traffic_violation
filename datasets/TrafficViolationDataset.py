@@ -82,7 +82,7 @@ class TrafficViolationDataset(Dataset):
                 labels_df = labels_df.drop(column, axis=1)
                 labels_df = pandas.concat([labels_df, encoded], axis=1)
 
-        # Convert to numpy arrays after preprocessing
+        # Convert to numpy arrays after preprocessing because Pytorch requires numpy arrays
         self.X = self.normalize_features(features_df.astype(float).values)
         self.y = labels_df.astype(float).values
         
